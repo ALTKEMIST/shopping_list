@@ -1,8 +1,8 @@
 {
     "name": "Mi Lista del Super",
     "short_name": "MLS",
-    "theme_color": "#ffffff",
+    "theme_color": "#000000",
     "background_color": "#ffffff",
-    "display": "fullscreen",
+    "display": "standalone",
     "start_url": "/shopping_list/index.html"
 }
