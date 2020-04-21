@@ -6,7 +6,23 @@
     <link rel="stylesheet" href="./public/vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./public/vendor/fontawesome_5_13_0/css/all.min.css">
     <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="shortcut icon" href="./public/img/logo.png" type="image/x-icon">
+
     <title>Mi Lista del Súper</title>
+
+    <!-- loading pwa -->
+    <script src="public/vendor/workbox/workbox-sw.js"></script>
+    <!-- manifest del app -->
+    <link rel="manifest" href="manifest.webmanifest" />
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('public/sw.js');
+            });
+        }
+    </script>
 </head>
 <body onload="loadLista()">
     <div class="container">
