@@ -4,17 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="./public/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./public/vendor/fontawesome_5_13_0/css/all.min.css">
     <link rel="stylesheet" href="./public/css/style.css">
-    <title>Mi Lista del Super</title>
+    <title>Mi Lista del Súper</title>
 </head>
-<body>
-    
+<body onload="loadLista()">
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col text-center">
+                Mi Lista del Súper
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col">
+                <input class="form-control" id="producto" type="text" placeholder="Nombre del producto">
+            </div>
+            <div class="col-3">
+                <input class="form-control" id="precioP" type="number" placeholder="$">
+            </div>
+            <div class="col-2">
+                <button type="button" class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Añadir a la lista" onclick="add()"><i class="fas fa-shopping-basket"></i></button>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body text-justify">
+                        <h6>Productos en la lista:</h6>
+                        <table class="table" id="shopping_list">
 
-
-
+                        </table>
+                        <hr>
+                        <div class="text-right font-weight-bold" id="total"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col">
+                <button type="button" class="btn btn-danger btn-block" data-toggle="tooltip" data-placement="top" title="Borrar toda la lista" onclick="deleteList()">LIMPIAR TODA LA LISTA</button>
+            </div>
+        </div>
+    </div>
 
     <script src="./public/vendor/jquery/jquery-3.3.1.min.js"></script>
     <script src="./public/vendor/popper/popper.min.js"></script>
     <script src="./public/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./public/js/main.js"></script>
 </body>
 </html>
