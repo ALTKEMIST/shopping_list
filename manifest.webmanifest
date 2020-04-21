@@ -3,6 +3,6 @@
     "short_name": "MLS",
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
-    "display": "standalone",
+    "display": "fullscreen",
     "start_url": "/shopping_list/index.html"
 }
